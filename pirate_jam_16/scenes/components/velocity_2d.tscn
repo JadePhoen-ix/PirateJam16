@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dikj68t5v6qcs"]
+
+[ext_resource type="Script" path="res://pirate_jam_16/scenes/components/velocity_2d.gd" id="1_ikyj5"]
+
+[node name="Velocity2D" type="Node"]
+script = ExtResource("1_ikyj5")
