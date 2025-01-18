@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://l6g5bqib0w0p"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/characters/player/player.gd" id="1_re2g0"]
+[ext_resource type="PackedScene" uid="uid://dikj68t5v6qcs" path="res://scenes/components/velocity_2d.tscn" id="2_o2onh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1dlf6"]
+size = Vector2(20, 20)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_re2g0")
+
+[node name="Velocity2D" parent="." instance=ExtResource("2_o2onh")]
+max_speed = 61.75
+acceleration = 55.75
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_1dlf6")
