@@ -8,8 +8,8 @@ class_name Velocity2D
 var velocity := Vector2.ZERO
 
 
-func accelerate_in_direction (direction: Vector2) -> void:
-	var desired_velocity := direction * max_speed
+func accelerate_in_direction (direction: Vector2, speed := max_speed) -> void:
+	var desired_velocity := direction * speed
 	velocity = velocity.lerp(desired_velocity, 1 - exp(-acceleration * get_process_delta_time()))
 
 
