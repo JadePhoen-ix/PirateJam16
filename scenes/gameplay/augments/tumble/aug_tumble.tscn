@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://diiugk5bqxoks"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/augments/tumble/aug_tumble.gd" id="1_8fr7r"]
+
+[node name="AugTumble" type="Node"]
+script = ExtResource("1_8fr7r")
+slot_type = 1

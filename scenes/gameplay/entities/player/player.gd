@@ -4,6 +4,12 @@ class_name Player
 
 var current_dash: Dash
 
+@onready var augment_manager := $AugmentManager as AugmentManager
+
+
+func _ready() -> void:
+	augment_manager.initialize_manager(self)
+
 
 func _physics_process(delta: float) -> void:
 	if current_dash != null:
@@ -16,15 +22,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("mobility"):
-		var data := {
-			direction = get_global_mouse_position() - global_position,
-			duration = 0.25,
-			speed = velocity_2d.max_speed * 5.0,
-			velocity_2d = velocity_2d,
-			body = self
-		}
-		current_dash = Dash.create(data)
+	if event.is_action_pressed("mind_active"):
+		augment_manager.trigger_augment_active(Augment.SlotType.MIND)
+	if event.is_action_pressed("core_active"):
+		augment_manager.trigger_augment_active(Augment.SlotType.CORE)
+	if event.is_action_pressed("hand_active"):
+		augment_manager.trigger_augment_active(Augment.SlotType.HAND)
 
 
 func _get_movement_vector() -> Vector2:
