@@ -1,8 +1,6 @@
-extends CharacterBody2D
+extends Entity
 class_name Player
 
-
-@onready var velocity_2d := $Velocity2D as Velocity2D
 
 var current_dash: Dash
 
