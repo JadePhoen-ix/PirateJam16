@@ -2,8 +2,7 @@ extends Node
 class_name AugmentManager
 
 
-@export var entity: Entity
-
+var entity: Entity
 var hand_augment: Augment
 var core_augment: Augment
 var mind_augment: Augment
@@ -62,10 +61,10 @@ func trigger_augment_active(slot: Augment.SlotType) -> void:
 	match slot:
 		Augment.SlotType.HAND:
 			if !hand_augment: return
-			hand_augment.active()
+			hand_augment._active()
 		Augment.SlotType.CORE:
 			if !core_augment: return
-			core_augment.active()
+			core_augment._active()
 		Augment.SlotType.MIND:
 			if !mind_augment: return
-			mind_augment.active()
+			mind_augment._active()

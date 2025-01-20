@@ -13,9 +13,9 @@ enum SlotType {
 var manager: AugmentManager
 
 
-func active() -> void:
+func _active() -> void:
 	push_warning("ACTIVE UNIMPLEMENTED WARNING: Active unimplemented.")
 
 
-func passive() -> void:
+func _passive() -> void:
 	push_warning("PASSIVE UNIMPLEMENTED WARNING: Passive unimplemented.")
