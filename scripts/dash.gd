@@ -16,23 +16,23 @@ static func create(data: Dictionary) -> Dash:
 	var new_dash := Dash.new()
 	
 	if not data.has("direction"):
-		push_error("MISSING PARAMETER ERROR: dash.gd: No direction found in data Dictionary")
+		push_error("MISSING PARAMETER ERROR: No direction found in data Dictionary")
 	new_dash.direction = data.direction.normalized()
 	
 	if not data.has("duration"):
-		push_error("MISSING PARAMETER ERROR: dash.gd: No duration found in data Dictionary")
+		push_error("MISSING PARAMETER ERROR: No duration found in data Dictionary")
 	new_dash.duration = data.duration
 	
 	if not data.has("speed"):
-		push_error("MISSING PARAMETER ERROR: dash.gd: No speed found in data Dictionary")
+		push_error("MISSING PARAMETER ERROR: No speed found in data Dictionary")
 	new_dash.speed = data.speed
 	
 	if not data.has("velocity_2d"):
-		push_error("MISSING PARAMETER ERROR: dash.gd: No velocity_2d found in data Dictionary")
+		push_error("MISSING PARAMETER ERROR: No velocity_2d found in data Dictionary")
 	new_dash.velocity_2d = data.velocity_2d
 	
 	if not data.has("body"):
-		push_error("MISSING PARAMETER ERROR: dash.gd: No body found in data Dictionary")
+		push_error("MISSING PARAMETER ERROR: No body found in data Dictionary")
 	new_dash.body = data.body
 	
 	new_dash._start()

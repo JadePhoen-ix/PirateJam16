@@ -22,13 +22,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		var data := {
 			direction = get_global_mouse_position() - global_position,
 			duration = 0.25,
-			speed = velocity_2d.max_speed * 2.0,
+			speed = velocity_2d.max_speed * 5.0,
 			velocity_2d = velocity_2d,
 			body = self
 		}
-		
 		current_dash = Dash.create(data)
-		print(data)
 
 
 func _get_movement_vector() -> Vector2:

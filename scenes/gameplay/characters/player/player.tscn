@@ -11,8 +11,8 @@ size = Vector2(20, 20)
 script = ExtResource("1_re2g0")
 
 [node name="Velocity2D" parent="." instance=ExtResource("2_o2onh")]
-max_speed = 61.75
-acceleration = 55.75
+max_speed = 60.0
+acceleration = 60.0
 
 [node name="Health" parent="." instance=ExtResource("3_l3tyc")]
 
