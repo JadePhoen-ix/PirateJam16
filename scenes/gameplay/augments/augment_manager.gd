@@ -2,9 +2,25 @@ extends Node
 class_name AugmentManager
 
 
+@export var entity: Entity
+
 var hand_augment: Augment
 var core_augment: Augment
 var mind_augment: Augment
+
+
+func initialize_manager(new_entity: Entity) -> void:
+	if new_entity:
+		entity = new_entity
+	
+	var children := get_children()
+	if children == []:
+		return
+	
+	for i in children.size():
+		var augment := children[i] as Augment
+		remove_child(augment)
+		set_augment(augment)
 
 
 func remove_augment(augment: Augment) -> void:

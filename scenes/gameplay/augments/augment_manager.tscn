@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpajq784n4pps"]
+[gd_scene load_steps=2 format=3 uid="uid://cpajq784n4pps"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/augments/augment_manager.gd" id="1_wt2ky"]
-[ext_resource type="Script" path="res://scenes/gameplay/augments/augment.gd" id="2_o1n1l"]
 
 [node name="AugmentManager" type="Node"]
 script = ExtResource("1_wt2ky")
-
-[node name="debug_augment" type="Node" parent="."]
-script = ExtResource("2_o1n1l")
