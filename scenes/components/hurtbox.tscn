@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnji66efkne5e"]
+
+[ext_resource type="Script" path="res://scenes/components/hurtbox.gd" id="1_ocay8"]
+
+[node name="Hurtbox" type="Area2D"]
+editor_description = "The Hurtbox's Collision Mask should be set based on its parent. 
+Example: The Player Character should have the Player Collision Mask."
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_ocay8")

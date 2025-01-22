@@ -22,7 +22,7 @@ func update_max_health (level: int) -> void:
 	max_health = base_health + (scale_factor * level / 2)
 
 
-func take_damage (amount: int) -> void:
+func damage (amount: int) -> void:
 	current_health = clampi(current_health - amount, 0, max_health)
 
 
