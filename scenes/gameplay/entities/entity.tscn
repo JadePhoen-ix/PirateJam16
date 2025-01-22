@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsbh01ggfugew"]
+[gd_scene load_steps=5 format=3 uid="uid://bsbh01ggfugew"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/entities/entity.gd" id="1_6rl06"]
 [ext_resource type="PackedScene" uid="uid://dikj68t5v6qcs" path="res://scenes/components/velocity_2d.tscn" id="2_f8wyt"]
 [ext_resource type="PackedScene" uid="uid://bqdm5vaucf4nx" path="res://scenes/components/health.tscn" id="3_tqoaq"]
+[ext_resource type="PackedScene" uid="uid://c6gn584pc32wl" path="res://scenes/components/level.tscn" id="4_4yqbt"]
 
 [node name="Entity" type="CharacterBody2D"]
 script = ExtResource("1_6rl06")
@@ -10,3 +11,5 @@ script = ExtResource("1_6rl06")
 [node name="Velocity2D" parent="." instance=ExtResource("2_f8wyt")]
 
 [node name="Health" parent="." instance=ExtResource("3_tqoaq")]
+
+[node name="Level" parent="." instance=ExtResource("4_4yqbt")]
