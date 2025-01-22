@@ -17,7 +17,6 @@ func _physics_process(delta: float) -> void:
 	
 	var direction := _get_movement_vector().normalized()
 	velocity_2d.accelerate_in_direction(direction)
-	
 	velocity_2d.move(self)
 
 
