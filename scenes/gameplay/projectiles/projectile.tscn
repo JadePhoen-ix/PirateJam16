@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cobmt0aq6wot5"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/projectiles/projectile.gd" id="1_42i05"]
+[ext_resource type="PackedScene" uid="uid://dikj68t5v6qcs" path="res://scenes/components/velocity_2d.tscn" id="2_xkant"]
+[ext_resource type="PackedScene" uid="uid://ch4df1sj61tyn" path="res://scenes/components/hitbox.tscn" id="3_bia24"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_36bg6"]
+size = Vector2(50, 5)
+
+[node name="Projectile" type="CharacterBody2D"]
+script = ExtResource("1_42i05")
+
+[node name="Velocity2D" parent="." instance=ExtResource("2_xkant")]
+max_speed = 500.0
+acceleration = 500.0
+
+[node name="Hitbox" parent="." instance=ExtResource("3_bia24")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_36bg6")
