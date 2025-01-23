@@ -12,6 +12,7 @@ script = ExtResource("1_re2g0")
 [node name="AugmentManager" parent="." index="0" instance=ExtResource("3_e5k14")]
 
 [node name="AugTumble" parent="AugmentManager" index="0" instance=ExtResource("4_grcbo")]
+duration = 0.1
 cooldown = 2.0
 
 [node name="Velocity2D" parent="." index="1"]
@@ -20,4 +21,3 @@ acceleration = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
 texture = ExtResource("5_6xk61")
-offset = Vector2(0, -32)

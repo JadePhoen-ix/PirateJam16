@@ -15,13 +15,17 @@ func _active() -> void:
 		print_rich("[color=red]Tumble currently on cooldown.[/color]")
 		return
 	
-	var entity := manager.entity as Player
 	var data := {
-			direction = entity.get_global_mouse_position() - entity.global_position,
+			direction = get_direction_vector(),
 			duration = 0.25,
-			speed = entity.velocity_2d.max_speed * 5.0,
+			speed = entity.velocity_2d.max_speed * speed_multiplier,
 			velocity_2d = entity.velocity_2d,
 			body = entity
 	}
 	entity.current_dash = Dash.create(data)
 	cooldown_timer = get_tree().create_timer(cooldown)
+
+
+func get_direction_vector() -> Vector2:
+	#return entity.get_global_mouse_position() - entity.global_position
+	return Input.get_vector("move_left", "move_right", "move_up", "move_down")
