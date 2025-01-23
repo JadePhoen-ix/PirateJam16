@@ -11,11 +11,11 @@ enum SlotType {
 @export var slot_type := SlotType.HAND
 
 var manager: AugmentManager
+var entity: Entity:
+	get: return manager.entity
 
 
-func _active() -> void:
-	push_warning("ACTIVE UNIMPLEMENTED WARNING: Active unimplemented.")
+func _active() -> void: pass
 
 
-func _passive() -> void:
-	push_warning("PASSIVE UNIMPLEMENTED WARNING: Passive unimplemented.")
+func _passive() -> void: pass
