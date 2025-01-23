@@ -10,7 +10,6 @@ func _process(delta: float) -> void:
 	var direction := (to_global(Vector2.RIGHT) - global_position).normalized()
 	velocity_2d.accelerate_in_direction(direction)
 	velocity_2d.move(self)
-	print(direction)
 
 
 func set_values(damage: float, speed: float, acceleration := velocity_2d.acceleration) -> void:

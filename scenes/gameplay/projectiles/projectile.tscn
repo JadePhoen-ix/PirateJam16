@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ch4df1sj61tyn" path="res://scenes/components/hitbox.tscn" id="3_bia24"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_36bg6"]
-size = Vector2(50, 5)
+size = Vector2(10, 1)
 
 [node name="Projectile" type="CharacterBody2D"]
 script = ExtResource("1_42i05")

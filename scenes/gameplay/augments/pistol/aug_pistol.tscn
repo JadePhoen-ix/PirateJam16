@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bawqyklgqkuvk"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/augments/pistol/aug_pistol.gd" id="1_ucyrp"]
+
+[node name="AugPistol" type="Node"]
+script = ExtResource("1_ucyrp")
