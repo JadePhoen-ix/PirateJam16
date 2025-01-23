@@ -2,8 +2,8 @@ extends Node
 class_name Velocity2D
 
 
-@export_range(0.0, 100.0, 0.25) var max_speed := 40.0
-@export_range(0.0, 100.0, 0.25) var acceleration := 5.0
+@export_range(0.0, 500.0, 0.25) var max_speed := 40.0
+@export_range(0.0, 500.0, 0.25) var acceleration := 5.0
 
 var velocity := Vector2.ZERO
 
