@@ -4,9 +4,7 @@
 [ext_resource type="Script" path="res://scenes/gameplay/entities/player/player.gd" id="1_re2g0"]
 [ext_resource type="PackedScene" uid="uid://cpajq784n4pps" path="res://scenes/gameplay/augments/augment_manager.tscn" id="3_e5k14"]
 [ext_resource type="PackedScene" uid="uid://diiugk5bqxoks" path="res://scenes/gameplay/augments/tumble/aug_tumble.tscn" id="4_grcbo"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_55heh"]
-size = Vector2(20, 20)
+[ext_resource type="Texture2D" uid="uid://bowxyrlyyvowp" path="res://_dev/player_debug.png" id="5_6xk61"]
 
 [node name="Player" instance=ExtResource("1_j6aoy")]
 script = ExtResource("1_re2g0")
@@ -16,5 +14,10 @@ script = ExtResource("1_re2g0")
 [node name="AugTumble" parent="AugmentManager" index="0" instance=ExtResource("4_grcbo")]
 cooldown = 2.0
 
+[node name="Velocity2D" parent="." index="1"]
+max_speed = 200.0
+acceleration = 200.0
+
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
-texture = SubResource("PlaceholderTexture2D_55heh")
+texture = ExtResource("5_6xk61")
+offset = Vector2(0, -32)
