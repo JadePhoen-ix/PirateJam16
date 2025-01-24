@@ -3,6 +3,7 @@ class_name Player
 
 
 var current_dash: Dash
+var hand_action_held: bool
 
 @onready var augment_manager := $AugmentManager as AugmentManager
 
@@ -20,13 +21,21 @@ func _physics_process(delta: float) -> void:
 	velocity_2d.move(self)
 
 
+func _process(delta: float) -> void:
+	if hand_action_held:
+		augment_manager.trigger_augment_active(Augment.SlotType.HAND)
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("mind_active"):
 		augment_manager.trigger_augment_active(Augment.SlotType.MIND)
 	if event.is_action_pressed("core_active"):
 		augment_manager.trigger_augment_active(Augment.SlotType.CORE)
+	
 	if event.is_action_pressed("hand_active"):
-		augment_manager.trigger_augment_active(Augment.SlotType.HAND)
+		hand_action_held = true
+	elif event.is_action_released("hand_active"):
+		hand_action_held = false
 
 
 func _get_movement_vector() -> Vector2:
