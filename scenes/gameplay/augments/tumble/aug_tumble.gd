@@ -7,11 +7,11 @@ class_name AugTumble
 @export_range(0.0, 10.0, 0.1) var speed_multiplier := 2.0
 @export_range(0.0, 10.0, 0.1) var cooldown := 5.0
 
-var cooldown_timer: SceneTreeTimer
+var cooldown_timer: Cooldown
 
 
 func _active() -> void:
-	if cooldown_timer != null and cooldown_timer.time_left > 0.0:
+	if cooldown_timer != null and cooldown_timer.active:
 		print_rich("[color=red]Tumble currently on cooldown.[/color]")
 		return
 	
@@ -22,8 +22,8 @@ func _active() -> void:
 			velocity_2d = entity.velocity_2d,
 			body = entity
 	}
-	entity.current_dash = Dash.create(data)
-	cooldown_timer = get_tree().create_timer(cooldown)
+	(entity as Player).current_dash = Dash.create(data)
+	cooldown_timer = Cooldown.new(cooldown)
 
 
 func get_direction_vector() -> Vector2:
